@@ -123,3 +123,21 @@ Answer:
 function reverseList(list) {
   return list.reverse();
 }
+
+
+
+Challenge 8
+
+Write a function that checks if a given string (case insensitive) is a palindrome.
+
+
+Answer:
+
+function isPalindrome(x) {
+  x = x.toLowerCase();
+  if (x === x.split("").reverse().join("")) {
+    console.log(`It's a palindrome!`);
+  } else {
+    console.log(`Not a palindrome`);
+  }
+}
