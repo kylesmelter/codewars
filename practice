@@ -703,3 +703,24 @@ function defineSuit(card) {
 }
 
 ---------------------------------------------------------------------
+
+Challenge 33
+
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example:
+348597 => [7,9,5,8,4,3]
+0 => [0]
+
+
+
+Answer:
+
+function digitize(n) {
+  let newArr = n.toString();
+  let reversed = newArr.split("").reverse();
+  reversed = reversed.map(Number);
+  return reversed;
+}
+
+------------------------------------------------------------------
