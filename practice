@@ -904,3 +904,19 @@ function bmi(weight, height) {
 };
 
 -------------------------------------------------------------
+
+Challenge 41
+
+Implement a function which convert the given boolean value into its string representation.
+
+Note: Only valid inputs will be given.
+
+
+Answer:
+
+function booleanToString(b){
+  let string = b.toString();
+  return string;
+}
+
+--------------------------------------------------------------
