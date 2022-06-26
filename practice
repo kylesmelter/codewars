@@ -2354,3 +2354,22 @@ function noOdds( values ){
 }
 
 ---------------------------------------------------------------
+
+Challenge 99
+
+Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+Example:
+"riley" --> "Hello Riley!"
+"JACK"  --> "Hello Jack!"
+
+
+Answer:
+
+var greet = function(name) {
+  let lowerCase = name.toLowerCase();
+  let replaced = lowerCase.replace(lowerCase[0], lowerCase[0].toUpperCase());
+  return `Hello ${replaced}!`
+};
+
+-------------------------------------------------------------
