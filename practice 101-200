@@ -57,3 +57,29 @@ function reverseLetter(str) {
 }
 
 ----------------------------------------------------------
+
+Challenge 103
+
+Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
+
+Example:
+
+Input:
+
+'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+
+Output:
+
+'alpha beta gamma delta'
+
+
+Answer:
+
+function removeDuplicateWords (s) {
+    let array = s.split(' ');
+    let set = new Set(array);
+    console.log([...set].join(' '));
+}
+
+----------------------------------------------------------
+  
