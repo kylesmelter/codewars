@@ -1,3 +1,5 @@
+Challenge 101
+
 The two oldest ages function/method needs to be completed. 
 It should take an array of numbers as its argument and return the two highest numbers within the array. 
 The returned value should be an array in the format [second oldest age, oldest age].
@@ -21,3 +23,37 @@ function twoOldestAges(ages){
 }
 
 ------------------------------------------------------------
+
+Challenge 102
+
+Task
+Given a string str, reverse it and omit all non-alphabetic characters.
+
+Example
+For str = "krishan", the output should be "nahsirk".
+
+For str = "ultr53o?n", the output should be "nortlu".
+
+Input/Output
+[input] string str
+A string consists of lowercase latin letters, digits and symbols.
+
+[output] a string
+
+
+Answer:
+
+function reverseLetter(str) {
+  //coding and coding..
+      let result = [];
+    let array = str.split('');
+    for(let i = 0; i <= array.length - 1; i++) {
+        if(array[i] >= 'a' && array[i] <= 'z') {
+            result.push(array[i]);
+        }
+    }
+    return result.reverse().join('');
+  
+}
+
+----------------------------------------------------------
