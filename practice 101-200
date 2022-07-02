@@ -183,3 +183,23 @@ function findShort(s){
 }
 
 ------------------------------------------------------------------
+
+Challenge 108
+
+Debug   function getSumOfDigits that takes positive integer to calculate sum of it's digits. Assume that argument is an integer.
+
+Example
+123  => 6
+223  => 7
+1337 => 14
+
+
+Answer:
+
+function getSumOfDigits(integer) {
+  let array = integer.toString().split('');
+  let numArray = array.map(Number);
+  return numArray.reduce((acc,c) => acc + c, 0)
+}
+
+-------------------------------------------------------------------
