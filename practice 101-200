@@ -404,3 +404,19 @@ function capitalizeWord(word) {
 }
 
 -------------------------------------------------------
+
+Challenge 116
+
+Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+The order of the sequence has to stay the same.
+
+
+Answer:
+
+function distinct(a) {
+  let set = new Set(a);
+  return [...set];
+}
+
+--------------------------------------------------------
