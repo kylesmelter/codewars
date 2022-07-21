@@ -653,3 +653,24 @@ function toWeirdCase(string){
 }
 
 -------------------------------------------------------------------
+
+Challenge 127
+
+Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+Examples
+pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+pigIt('Hello world !');     // elloHay orldway !
+
+
+Answer:
+
+function pigIt(str){
+  let array = str.split(' ')
+  for(let i = 0; i <= array.length -1; i++) {
+      array[i] = array[i].slice(1) + array[i][0] + 'ay'
+  }
+  return array.join(' ');
+}
+
+--------------------------------------------------------------
