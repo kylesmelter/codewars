@@ -897,3 +897,24 @@ function alphabetPosition(text) {
 }
 
 ---------------------------------------------------
+
+Challenge 135
+
+Given a mixed array of number and string representations of integers, 
+add up the string integers and subtract this from the total of the non-string integers.
+
+Return as a number.
+
+
+Answer:
+
+function divCon(x){
+    let numbers = x.filter(x => typeof x === 'number');
+    let sumNumbers = numbers.reduce((acc,c) => acc + c, 0);
+    let strings = x.filter(x => typeof x === 'string');
+    let stringNumbers = strings.map(Number);
+    let sumStrings = stringNumbers.reduce((acc,c) => acc + c, 0);
+    return sumNumbers - sumStrings;
+}
+
+--------------------------------------------------
