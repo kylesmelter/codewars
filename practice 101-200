@@ -1001,3 +1001,21 @@ function findOdd(A) {
 }
 
 ------------------------------------------------------------
+
+Challenge 139
+
+Write reverseList function that simply reverses lists.
+
+
+Answer:
+
+function reverseList(arr) {
+  if(arr.length === 0) {
+    return [];
+  } else {
+    return arr.reverse();
+  }
+  
+}
+
+-------------------------------------------------------------
