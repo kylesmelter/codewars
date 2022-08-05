@@ -1147,3 +1147,35 @@ function minValue(values){
         let number = array.sort((a,b) => a - b).join('')
         return Number(number)
 }
+
+--------------------------------------------------------------
+
+Challenge 143
+
+Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). 
+Leave any incidence of c untouched.
+
+Example:
+
+'acb' --> 'bca'
+'aabacbaa' --> 'bbabcabb'
+
+
+Answer:
+
+function switcheroo(x){
+  let result = [];
+  let array = x.toLowerCase().split('');
+  for(let i = 0; i <= array.length - 1; i++) {
+    if(array[i] === 'a') {
+      result.push('b')
+    } else if(array[i] === 'b') {
+      result.push('a')
+    } else {
+      result.push('c');
+    }
+  }
+  return result.join('')
+}
+
+-----------------------------------------------------------
