@@ -1243,3 +1243,40 @@ function min(arr, toReturn) {
 }
 
 --------------------------------------------------------------
+
+Challenge 146
+
+Gordon Ramsay shouts. He shouts and swears. There may be something wrong with him.
+
+Anyway, you will be given a string of four words. Your job is to turn them in to Gordon language.
+
+Rules:
+
+Obviously the words should be Caps, Every word should end with '!!!!', Any letter 'a' or 'A' should become '@', Any other vowel should become '*'.
+
+
+Answer:
+
+function gordon(a){
+      let answer = [];
+    let result =[];
+    let array = a.split(' ')
+    for(let i = 0; i <= array.length - 1; i++) {
+        result.push(array[i] + '!!!!')
+    }
+    result = result.join(' ')
+
+    let secondSplit = result.toUpperCase().split('')
+    for(let i = 0; i <= secondSplit.length - 1; i++) {
+        if(secondSplit[i] === 'A') {
+            answer.push('@');
+        } else if(secondSplit[i] === 'E' || secondSplit[i] === 'I' || secondSplit[i] === 'O' || secondSplit[i] === 'U') {
+            answer.push('*');
+        } else {
+            answer.push(secondSplit[i]);
+        }
+    }
+    return answer.join('')
+}
+
+----------------------------------------------------------------
