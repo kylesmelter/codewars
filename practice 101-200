@@ -1558,3 +1558,19 @@ function deleteNth(arr,n){
 }
 
 ---------------------------------------------------------------
+
+Challenge 156
+
+Modify the spacify function so that it returns the given string with spaces inserted between each character.
+
+spacify("hello world") // returns "h e l l o   w o r l d"
+
+
+Answer:
+
+function spacify(str) {
+    let answer = str.split('').join(' ')
+    return answer;
+}
+
+--------------------------------------------------------------
