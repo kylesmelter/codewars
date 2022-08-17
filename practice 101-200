@@ -1574,3 +1574,30 @@ function spacify(str) {
 }
 
 --------------------------------------------------------------
+
+Challenge 157
+
+Write a function that removes every lone 9 that is inbetween 7s.
+
+"79712312" --> "7712312"
+"79797"    --> "777"
+
+
+Answer:
+
+function sevenAte9(str) {
+    let result = [];
+    let array = str.split('');
+
+    for(let i = 0; i <= array.length - 1; i++) {
+        if(array[i - 1] === '7' && array[i + 1] === '7' && array[i] === '9') {
+
+        } else {
+            result.push(array[i]);
+        }
+    }
+
+    return result.join('')
+}
+
+---------------------------------------------------------
