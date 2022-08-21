@@ -1684,3 +1684,28 @@ function order(words){
 }
 
 -----------------------------------------------------------
+
+Challenge 161
+
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+Examples (Input -> Output):
+* "String"      -> "SSttrriinngg"
+* "Hello World" -> "HHeelllloo  WWoorrlldd"
+* "1234!_ "     -> "11223344!!__  "
+Good Luck!
+
+
+Answer:
+
+function doubleChar(str) {
+  let result = [];
+  let array = str.split('');
+  
+  for(let i = 0; i <= array.length - 1; i++) {
+    result.push(array[i].repeat(2));
+  }
+  return result.join('')
+}
+
+--------------------------------------------------------
