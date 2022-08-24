@@ -1754,3 +1754,29 @@ return `Position of alphabet: ${letter.charCodeAt() - 96}`
 }
 
 ----------------------------------------------------------
+
+Challenge 164
+
+You will be given a list of strings. You must sort it alphabetically (case-sensitive, 
+and based on the ASCII values of the chars) and then return the first value.
+
+The returned value must be a string, and have "***" between each of its letters.
+
+You should not remove or add elements from/to the array.
+
+
+Abswer:
+
+function twoSort(s) {
+    let result = [];
+    let sorted = s.sort();
+
+    let sortedZero = sorted[0].split('');
+
+    for(let i = 0; i <= sortedZero.length - 1; i++) {
+        result.push(sortedZero[i] + '***')
+    }
+    return result.join('').slice(0, -3)
+}
+
+-------------------------------------------------------------
