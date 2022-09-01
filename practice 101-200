@@ -1988,3 +1988,32 @@ function shortcut (string) {
 }
 
 ----------------------------------------------------------
+
+Challenge 173
+
+Complete the solution so that it splits the string into pairs of two characters. 
+If the string contains an odd number of characters then it should replace 
+the missing second character of the final pair with an underscore ('_').
+
+Examples:
+* 'abc' =>  ['ab', 'c_']
+* 'abcdef' => ['ab', 'cd', 'ef']
+
+
+Answer:
+
+function solution(str){
+    let result = [];
+    let array = str.split('')
+
+    for(let i = 0; i <= array.length - 1; i+= 2) {
+        result.push(array[i] + array[i + 1])
+    }
+
+    if(result[result.length - 1].includes('undefined')) {
+        result[result.length - 1] = result[result.length - 1][0] + '_'
+    }
+    console.log(result);
+}
+
+---------------------------------------------------------
