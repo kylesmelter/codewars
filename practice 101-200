@@ -2080,3 +2080,70 @@ function count (string) {
 }
 
 ---------------------------------------------------------
+
+Challenge 177
+
+DESCRIPTION:
+Step 1: Create a function called encode() to replace all the lowercase vowels in a given string with numbers according 
+to the following pattern:
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+For example, encode("hello") would return "h2ll4". There is no need to worry about uppercase vowels in this kata.
+
+Step 2: Now create a function called decode() to turn the numbers back into vowels according to the same pattern shown above.
+
+For example, decode("h3 th2r2") would return "hi there".
+
+For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
+
+
+Answer:
+
+function encode(string) {
+    let result = [];
+    let array = string.split('')
+    
+    for(let i = 0; i <= array.length - 1; i++) {
+      if(array[i] === 'a') {
+        result.push('1')
+      } else if(array[i] === 'e') {
+        result.push('2')
+      } else if(array[i] === 'i') {
+        result.push('3')
+      } else if(array[i] === 'o') {
+        result.push('4')
+      } else if(array[i] === 'u') {
+        result.push('5')
+      } else {
+        result.push(array[i]);
+      }
+ }
+    
+  return result.join('')
+    
+ }
+  
+  function decode(string) {
+    let decodeResult = [];
+    let decodeArray = string.split('');
+    
+    for(let j = 0; j <= decodeArray.length - 1; j++) {
+      if(decodeArray[j] === '1') {
+        decodeResult.push('a');
+      } else if(decodeArray[j] === '2') {
+        decodeResult.push('e');
+      } else if(decodeArray[j] === '3') {
+        decodeResult.push('i');
+      } else if(decodeArray[j] === '4') {
+        decodeResult.push('o');
+      } else if(decodeArray[j] === '5') {
+        decodeResult.push('u')
+      }
+    }
+    
+  return decodeResult.join('')
+ }
