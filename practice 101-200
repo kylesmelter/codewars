@@ -2147,3 +2147,28 @@ function encode(string) {
     
   return decodeResult.join('')
  }
+ 
+ -------------------------------------------------------------
+ 
+ Challenge 178
+ 
+ Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+Examples
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+
+Answer:
+
+function removeUrlAnchor(url){
+    let tag = url.indexOf('#');
+    
+    if(url.includes('#')) {
+        return url.slice(0, tag);
+    } else {
+        return url;
+    }
+}
+
+-------------------------------------------------------------
