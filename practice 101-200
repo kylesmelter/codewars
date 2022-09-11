@@ -2371,3 +2371,150 @@ function checkAlive (health) {
 }
 
 -----------------------------------------------------------
+
+Challenge 183
+
+ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. 
+ROT13 is an example of the Caesar cipher.
+
+Create a function that takes a string and returns the string ciphered with Rot13. 
+If there are numbers or special characters included in the string, they should be returned as they are. 
+Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+
+
+Answer:
+
+function rot13(message){
+  let numResult = [];
+
+  let letterResult = [];
+
+  message = message.split('')
+
+  for(let i = 0; i <= message.length - 1; i++) {
+      if(message[i] >= 'a' && message[i] <= 'z' && (message[i].charCodeAt() - 96) < 14) {
+        numResult.push(message[i].charCodeAt() - 96 + 13);
+    } else if(message[i] >= 'a' && message[i] <= 'z' && (message[i].charCodeAt() - 96) >= 14) {
+        numResult.push(message[i].charCodeAt() - 96 - 13);
+    } else if(message[i] >= 'A' && message[i] <= 'Z' && (message[i].charCodeAt() < 78)) {
+        numResult.push(message[i].charCodeAt() + 13);
+    } else if(message[i] >= 'A' && message[i] <= 'Z' && (message[i].charCodeAt() >= 78)) {
+        numResult.push(message[i].charCodeAt() - 13);
+    } else {
+        numResult.push(message[i])
+    }
+  }
+
+  for(let j = 0; j <= numResult.length - 1; j++) {
+    if(numResult[j] === 1) {
+        letterResult.push('a')
+    } else if(numResult[j] === 2) {
+        letterResult.push('b')
+    } else if(numResult[j] === 3) {
+        letterResult.push('c')
+    } else if(numResult[j] === 4) {
+        letterResult.push('d')
+    } else if(numResult[j] === 5) {
+        letterResult.push('e')
+    } else if(numResult[j] === 6) {
+        letterResult.push('f')
+    } else if(numResult[j] === 7) {
+        letterResult.push('g')
+    } else if(numResult[j] === 8) {
+        letterResult.push('h')
+    } else if(numResult[j] === 9) {
+        letterResult.push('i')
+    } else if(numResult[j] === 10) {
+        letterResult.push('j')
+    }  else if(numResult[j] === 11) {
+        letterResult.push('k')
+    }  else if(numResult[j] === 12) {
+        letterResult.push('l')
+    }  else if(numResult[j] === 13) {
+        letterResult.push('m')
+    }  else if(numResult[j] === 14) {
+        letterResult.push('n')
+    }  else if(numResult[j] === 15) {
+        letterResult.push('o')
+    }  else if(numResult[j] === 16) {
+        letterResult.push('p')
+    }  else if(numResult[j] === 17) {
+        letterResult.push('q')
+    }  else if(numResult[j] === 18) {
+        letterResult.push('r')
+    }  else if(numResult[j] === 19) {
+        letterResult.push('s')
+    }  else if(numResult[j] === 20) {
+        letterResult.push('t')
+    }  else if(numResult[j] === 21) {
+        letterResult.push('u')
+    }  else if(numResult[j] === 22) {
+        letterResult.push('v')
+    }  else if(numResult[j] === 23) {
+        letterResult.push('w')
+    }  else if(numResult[j] === 24) {
+        letterResult.push('x')
+    }  else if(numResult[j] === 25) {
+        letterResult.push('y')
+    }  else if(numResult[j] === 26) {
+        letterResult.push('z')
+    }  else if(numResult[j] === 65) {
+        letterResult.push('A')
+    }  else if(numResult[j] === 66) {
+        letterResult.push('B')
+    }  else if(numResult[j] === 67) {
+        letterResult.push('C')
+    }  else if(numResult[j] === 68) {
+        letterResult.push('D')
+    }  else if(numResult[j] === 69) {
+        letterResult.push('E')
+    }  else if(numResult[j] === 70) {
+        letterResult.push('F')
+    }  else if(numResult[j] === 71) {
+        letterResult.push('G')
+    }  else if(numResult[j] === 72) {
+        letterResult.push('H')
+    }  else if(numResult[j] === 73) {
+        letterResult.push('I')
+    }  else if(numResult[j] === 74) {
+        letterResult.push('J')
+    }  else if(numResult[j] === 75) {
+        letterResult.push('K')
+    }  else if(numResult[j] === 76) {
+        letterResult.push('L')
+    }  else if(numResult[j] === 77) {
+        letterResult.push('M')
+    }  else if(numResult[j] === 78) {
+        letterResult.push('N')
+    }  else if(numResult[j] === 79) {
+        letterResult.push('O')
+    }  else if(numResult[j] === 80) {
+        letterResult.push('P')
+    }  else if(numResult[j] === 81) {
+        letterResult.push('Q')
+    }  else if(numResult[j] === 82) {
+        letterResult.push('R')
+    }  else if(numResult[j] === 83) {
+        letterResult.push('S')
+    }  else if(numResult[j] === 84) {
+        letterResult.push('T')
+    }  else if(numResult[j] === 85) {
+        letterResult.push('U')
+    }  else if(numResult[j] === 86) {
+        letterResult.push('V')
+    }  else if(numResult[j] === 87) {
+        letterResult.push('W')
+    }  else if(numResult[j] === 88) {
+        letterResult.push('X')
+    }  else if(numResult[j] === 89) {
+        letterResult.push('Y')
+    }  else if(numResult[j] === 90) {
+        letterResult.push('Z')
+    } else {
+        letterResult.push(numResult[j])
+    }
+  }
+  return letterResult.join('');
+}
+
+-----------------------------------------------------------------------
