@@ -2744,3 +2744,33 @@ function factorial(n){
 }
 
 ------------------------------------------------------------
+
+Challenge 192
+
+The code provided is supposed replace all the dots . in the specified String str with dashes -
+
+But it's not working properly.
+
+Task
+Fix the bug so we can all go home early.
+
+Notes
+String str will never be null.
+
+
+Answer:
+
+var replaceDots = function(str) {
+  let result = [];
+  
+  for(let i = 0; i <= str.length - 1; i++) {
+    if(str[i] === '.') {
+      result.push('-')
+    } else {
+      result.push(str[i])
+    }
+  }
+  return result.join('')
+}
+
+--------------------------------------------------------------------
