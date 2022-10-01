@@ -71,3 +71,29 @@ function tribonacci(signature,n){
 }
 
 ------------------------------------------------------------------
+
+Challenge 203
+
+Reverse every other word in a given string, then return the string. 
+Throw away any leading or trailing whitespace, while ensuring there is exactly one space between each word. 
+Punctuation marks should be treated as if they are a part of the word in this kata.
+
+
+Answer:
+
+function reverse(str){
+  let result = [];
+  
+  let array = str.split(' ');
+  
+  for(let i = 0; i <= array.length - 1; i++) {
+    if(i % 2 === 0) {
+      result.push(array[i])
+    } else {
+      result.push(array[i].split('').reverse().join(''))
+    }
+  }
+  return result.join(' ').trim();
+}
+
+-------------------------------------------------------------
