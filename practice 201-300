@@ -333,3 +333,35 @@ function orderWeight(strng) {
 }
 
 ---------------------------------------------------------
+
+Challenge 211
+
+Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+
+Your task is to process a string with "#" symbols.
+
+Examples
+"abc#d##c"      ==>  "ac"
+"abc##d######"  ==>  ""
+"#######"       ==>  ""
+""              ==>  ""
+
+
+Answer:
+
+function cleanString(s) {
+    let result = [];
+
+    let array = s.split('');
+
+    for(let i = 0; i <= array.length - 1; i++) {
+        if(array[i] !== '#') {
+            result.push(array[i]);
+        } else if(array[i] === '#') {
+            result.pop();
+        }
+    }
+    return result.join('');
+}
+
+--------------------------------------------------------------
