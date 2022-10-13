@@ -416,3 +416,36 @@ var filterString = function(value) {
 }
 
 ---------------------------------------------------------------
+
+Challenge 214
+
+Tea for two!
+
+Given a string or number, write a function tea42 that takes as input a string or number and returns a string where every '2' charcter 
+or digit has been replaced with a t.
+
+tea42('coffee') //should return 'coffee'
+tea42('tea') //should return 'tea'
+tea42('2ea') //should return 'tea'
+tea42(9022) //should return '90tt'
+tea42(5676765) //should return '5676765'
+tea42('2u2u') //should return 'tutu'
+
+
+Answer:
+
+function tea42(input) {
+
+    let result = [];
+    
+    for(let i = 0; i <= input.length - 1; i++) {
+      if(input[i] === 2 || input[i] === '2') {
+        result.push('t');
+      } else {
+        result.push(input[i]);
+      }
+    }
+    console.log(result.join(''));
+ };
+ 
+ ----------------------------------------------------------------
