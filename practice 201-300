@@ -542,3 +542,31 @@ function one_two_three() {
 }
 
 ----------------------------------------------------------
+
+Challenge 218
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+Example
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+
+
+Answer:
+
+function solution(string) {
+  let result = "";
+  // loop on letter
+  for (let letter of string) {
+    // if letter is uppercase and not the first letter of the word add a space followed by the letter
+    if (letter == letter.toUpperCase()) {
+      result += ` ${letter}`;
+    } else { // else just add the letter
+      result += letter;
+    }
+  }
+  return result;
+}
+
+---------------------------------------------------------
